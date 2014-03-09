@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="MAD.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>make-a-deal</title>
+    <link rel="stylesheet" href="/css/Main.css" />
+    <script src="/js/ColumnsFix.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <form id="form1" runat="server">
+                <div class ="page-header">                    
+                    <asp:ContentPlaceHolder ID="PageHeader" runat="server" />
+                </div>
+                <div class="page-content">
+                    <asp:ContentPlaceHolder ID="PageContent" runat="server"/>
+
+                </div>
+            </form>
+        </div>
+        <div class="footer-fix"></div>
+    </div>
+    <div class="page-footer">
+        <asp:ContentPlaceHolder ID="PageFooter" runat="server" />
+    </div>
+</body>
+</html>

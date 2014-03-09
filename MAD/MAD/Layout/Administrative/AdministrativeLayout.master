@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layout/TwoColumnsLeftAside.master" AutoEventWireup="true" CodeBehind="AdministrativeLayout.master.cs" Inherits="MAD.Layout.Administrative.AdministrativeLayout" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="PageHeader" runat="server">
+    <asp:PlaceHolder ID="AdministrativeLayoutHeader" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="LeftColumn" runat="server">
+    <p>Administrative tasks:</p>
+    <ul>        
+        <li>
+            <asp:HyperLink
+                NavigateUrl='<%$RouteUrl:routename=CreateUsersRoute%>'
+                runat="server">
+                Manage users
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink
+                NavigateUrl='<%$RouteUrl:routename=CreateRolesRoute%>'
+                runat="server">
+                Manage roles
+            </asp:HyperLink>
+        </li>
+        <li>
+            <asp:HyperLink
+                NavigateUrl='<%$RouteUrl:routename=DefaultRoute%>'
+                runat="server">
+                Back to the site
+            </asp:HyperLink>
+        </li>
+    </ul>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="CenterColumn" runat="server">
+    <asp:ContentPlaceHolder ID="CenterColumn" runat="server" />
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="PageFooter" runat="server">
+    <asp:PlaceHolder ID="AdministrativeLayoutFooter" runat="server" />
+</asp:Content>

@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Layout/OneColumn.master" AutoEventWireup="true" CodeBehind="DefaultLayout.master.cs" Inherits="MAD.Layout.Default.DefaultLayout" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="PageHeader" runat="server">
+    <div class="page-header-content">
+        <div class="rightColumn">
+            <asp:LoginView runat="server">
+                <AnonymousTemplate>
+                    You are not logged in.
+                    <asp:LoginStatus runat="server" />
+                    <a href="<%=GetRouteUrl("RegisterRoute", null)%>">
+                        [Register]
+                    </a>
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    <p>
+                        <asp:LoginName runat="server"/>
+                        <asp:LoginStatus runat="server" />
+                    </p>
+                    <ul>
+                        <asp:LoginView runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Administrators">
+                                    <ContentTemplate>
+                                        <li>
+                                            <asp:HyperLink 
+                                                NavigateUrl="<%$RouteUrl: routename=AdministrativeRoute %>"
+                                                runat="server">
+                                                Administrative tasks
+                                            </asp:HyperLink>
+                                        </li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <asp:LoginView runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Auctioneers">
+                                    <ContentTemplate>
+                                        <li>
+                                            <asp:HyperLink
+                                                NavigateUrl="<%$RouteUrl: routename=CreateAuctionRoute %>"
+                                                runat="server">
+                                                Create auction
+                                            </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="<%=GetRouteUrl("ShowUserAuctionsRoute", new { user_name = HttpContext.Current.User.Identity.Name}) %>"
+                                                >
+                                                My auctions
+                                            </a>
+                                        </li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                    </ul>
+                </LoggedInTemplate>
+            </asp:LoginView>
+                       
+
+        </div>
+        <div class="centerColumn">
+            <h1>Sample auction system</h1>
+            <asp:HyperLink 
+                NavigateUrl="<%$RouteUrl: routename=AuctionsRoute%>"
+                runat="server">
+                Auctions
+            </asp:HyperLink>
+            <br />
+            <asp:HyperLink 
+                NavigateUrl="<%$RouteUrl: routename=SearchLotsRoute%>"
+                runat="server">
+                Find lots
+            </asp:HyperLink>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="CenterColumn" runat="server">
+    <asp:ContentPlaceHolder ID="CenterColumn" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="PageFooter" runat="server">
+    <div class="page-footer-content">
+
+    </div>
+</asp:Content>

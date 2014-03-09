@@ -1,0 +1,272 @@
+﻿/*<Global>*/
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html, body{
+    height: 100%;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h6 {
+    font-size: 10pt;
+}
+h5 {
+    font-size: 12pt;
+}
+h4 {
+    font-size: 14pt;
+}
+h3 {
+    font-size: 16pt;
+}
+h2 {
+    font-size: 18pt;
+}
+h1 {
+    font-size: 20pt;
+}
+a{
+    color: #666;
+    text-decoration: underline;
+}
+a:hover{
+    color: #222;    
+    text-decoration: none;
+}
+ul {
+    padding-left: 20px;
+}
+ul > li {
+   
+}
+table {
+    border-collapse: collapse;        
+}
+td {
+    padding: 10px;
+}
+table, th, td {        
+}
+th {
+    font-weight: 700;
+}
+tr:hover {
+    background: #eee;
+}
+
+/*</Global>*/
+
+/*<Layout>*/
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -100px;
+}
+.footer-fix {
+    height: 100px;
+    clear:both;
+}
+.page-footer {
+    height: 100px;
+}
+.page {
+    overflow: hidden;
+}
+.page-header {
+    height: auto;
+    overflow: hidden;
+}
+
+.page-content {
+    overflow: hidden;
+}
+
+.leftColumn {
+    float: left;
+    padding: 10px;
+    overflow: hidden;
+}
+.rightColumn {
+    float: right;
+    padding: 10px;
+    overflow: hidden;
+}
+.centerColumn {
+    overflow: hidden;
+    padding: 10px;
+}
+
+/*</Layout>*/
+
+/*<Header>*/
+.page-header-content {
+    overflow: hidden;    
+    border-bottom: 2px solid #eee;
+}
+.page-header-content .menu {
+
+}
+/*</Header>*/
+
+/*<Content>*/
+.page-content .centerColumn {
+    min-width: 600px;
+}
+.page-content .leftColumn {
+    min-width: 150px;
+}
+.page-content .rightColumn {
+    min-width: 150px;
+}
+.centeredContent {
+    width: 900px;
+    margin: 0 auto;
+}
+
+/*</Content>*/
+
+/*<Footer>*/
+.page-footer-content {
+    overflow: hidden;
+    border-top: 2px solid #eee;
+}
+/*</Footer>*/
+
+/*<navMenu>*/
+ul.navMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+ul.navMenu > li {
+    float: left;
+}
+ul.navMenu > li:last-child {
+    margin-right: 0;
+}
+ul.navMenu > li.navMenu-separator::after {
+    content: ">";
+    margin: 0 10px;
+}
+/*</navMenu>*/
+
+/*<PropertyBox>*/
+
+.propertyBox {  
+    margin: 10px;  
+    clear: both;
+}
+
+.propertyBox-item{   
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.properyBox-item:last-child{
+    margin-bottom: 0;
+}
+.propertyBox-item-key{
+    display: block;
+    float: left;
+    text-align: left;
+    width: 150px;
+    overflow: hidden;
+}
+.propertyBox-item-value{
+    display: block;
+    text-align: left;
+    overflow: hidden;
+}
+
+.propertyBox-horizontal{
+    margin: 10px;
+    overflow: hidden;
+    clear: both;
+}
+.propertyBox-horizontal > .propertyBox-item{
+    float: left;
+    margin: 10px;
+}
+
+/*</PropertyBox>*/
+
+/*<Lot>*/
+.lot{
+    width: 200px;
+    margin: 20px;
+    float: left;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px #666;
+    border: 1px solid #eee;
+}
+.lot-title {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+.lot-description {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+.lot-details {
+    padding: 10px;    
+}
+.lot-status-sold {
+    height: 30px;
+    font-size: 18pt;
+    background: #23ba42;
+    color: #eee;
+    text-align: center;
+}
+.lot-startingPrice {
+    padding: 10px;
+}
+/*</Lot>*/
+
+/*<Auction>*/
+.auction {
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+.auction:hover {
+    background: #eee;
+}
+.auction-title {
+
+}
+.auction-status {
+    font-style: italic;
+}
+
+/*</Auction>*/
+
+/*<ChooseRoleMenu>*/
+.chooseRoleMenu {
+    display: block;
+    width: 300px;
+    height: 100px;
+    margin: auto auto;
+    border: 1px solid #eee;
+    box-shadow: 1px 1px 2px #666;
+}
+.chooseRoleMenu a {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20pt;
+    padding-top: 30px;
+}
+.chooseRoleMenu a:hover {
+    text-decoration: none;
+    background: #eee;
+}
+/*</ChooseRoleMenu>*/
